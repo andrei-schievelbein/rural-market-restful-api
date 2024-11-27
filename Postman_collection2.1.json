@@ -1,0 +1,723 @@
+{
+	"info": {
+		"_postman_id": "48dc6d2e-6560-4589-a431-d3892c3c9ea7",
+		"name": "RuralMarketRestiful",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23104615"
+	},
+	"item": [
+		{
+			"name": "Anuncio",
+			"item": [
+				{
+					"name": "Anuncio listar todos os Anúncios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/anuncio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anuncio Listar paginado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/page",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anuncio Listar paginado pagina 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/page?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anuncio Lista paginado pagina 3 size 10",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/page?page=0&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anuncio Listar paginado page 0 zise 10 sor titulo asc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/page?page=0&size=10&sort=titulo,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sort",
+									"value": "titulo,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Valor acima de X",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/valoracima?minValor=5000000&sort=valor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"valoracima"
+							],
+							"query": [
+								{
+									"key": "minValor",
+									"value": "5000000"
+								},
+								{
+									"key": "sort",
+									"value": "valor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Valor abaixo de X",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/valorabaixo?maxValor=5000000&sort=valor,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"valorabaixo"
+							],
+							"query": [
+								{
+									"key": "maxValor",
+									"value": "5000000"
+								},
+								{
+									"key": "sort",
+									"value": "valor,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Por Modalidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/modalidade?modalidade=leilao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"modalidade"
+							],
+							"query": [
+								{
+									"key": "modalidade",
+									"value": "leilao"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Valor entre X e Y",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/valor?minValor=100000&maxValor=500000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"valor"
+							],
+							"query": [
+								{
+									"key": "minValor",
+									"value": "100000"
+								},
+								{
+									"key": "maxValor",
+									"value": "500000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Anuncio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Rafael Pereira Junior\",\r\n        \"endereco\": \"Avenida das Orquídeas, 567\",\r\n        \"telefone\": \"555-1234\",\r\n        \"email\": \"rafael.pereira.junior@yahoo.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comprador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comprador/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": 2,\r\n        \"nome\": \"Lucas Santos\",\r\n        \"endereco\": \"Rua das Palmeiras, 981\",\r\n        \"telefone\": \"555-5678\",\r\n        \"email\": \"lucas.santos@hotmail.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comprador/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Listar todos Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por Email especifico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/email?email=rafael.pereira@yahoo.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "rafael.pereira@yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os Emails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/emails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Usuário paginado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/page",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Rafael Pereira Junior\",\r\n        \"endereco\": \"Avenida das Orquídeas, 567\",\r\n        \"telefone\": \"555-1234\",\r\n        \"email\": \"rafael.pereira.junior@yahoo.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comprador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": 2,\r\n        \"nome\": \"Lucas Santos\",\r\n        \"endereco\": \"Rua das Palmeiras, 981\",\r\n        \"telefone\": \"555-5678\",\r\n        \"email\": \"lucas.santos@hotmail.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comprador/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comprador",
+			"item": [
+				{
+					"name": "Listar todos Compradores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comprador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por Email especifico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comprador/email?email=maria.oliveira@yahoo.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "maria.oliveira@yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os Emails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comprador/emails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Usuário paginado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comprador/page",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comprador/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Comprador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Rafael Pereira Junior\",\r\n        \"endereco\": \"Avenida das Orquídeas, 567\",\r\n        \"telefone\": \"555-1234\",\r\n        \"email\": \"rafael.pereira.junior@yahoo.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comprador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comprador/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": 2,\r\n        \"nome\": \"Lucas Santos\",\r\n        \"endereco\": \"Rua das Palmeiras, 981\",\r\n        \"telefone\": \"555-5678\",\r\n        \"email\": \"lucas.santos@hotmail.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comprador/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comprador",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
