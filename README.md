@@ -56,7 +56,7 @@ Para fins de testes, o banco de dados é automaticamente populado ao rodar a apl
 
 ## 📷 Screenshots
 
-<img title="" src="file:///D:/1Ads/Github/Java/rural-market-restiful-api/docs/demo.gif" alt="Demonstração do Projeto" width="480">
+<img title="" src="./docs/demo.gif" alt="Demonstração do Projeto" width="480">
 
 ## 💡 Contribuições
 
